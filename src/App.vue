@@ -25,9 +25,19 @@ export default {
 			lang: 'pt-br'
 		},
 
-		meta: [{
-			charset: 'utf-8'
-		}]
+		meta: [
+			{
+				charset: 'utf-8'
+			},
+			{
+				name: 'robots',
+				content: 'index, follow'
+			},
+			{
+				name: 'keywords',
+				content: ''
+			}
+		]
 	}
 }
 </script>

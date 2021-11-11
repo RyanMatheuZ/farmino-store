@@ -1,8 +1,6 @@
 <template>
 	<main>
-		<h1 class="text-center mt-5">
-			Hello, World
-		</h1>
+
 	</main>
 </template>
 
@@ -16,11 +14,7 @@ export default {
 		meta: [
 			{
 				name: 'description',
-				content: ''
-			},
-			{
-				name: 'keywords',
-				content: ''
+				content: 'O Farmino é pra qualquer fome. Peça onde estiver. Os melhores alimentos estão aqui!'
 			}
 		]
 	}

@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import VueMeta from 'vue-meta'
-import './assets/css/app.css'
+import './assets/css/style.css'
 
 Vue.use(VueMeta)
 
