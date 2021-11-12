@@ -14,7 +14,7 @@ export default {
 		meta: [
 			{
 				name: 'description',
-				content: ''
+				content: 'Conheça a história da Farmino, um exemplo de superação!'
 			}
 		]
 	}

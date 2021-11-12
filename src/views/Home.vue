@@ -5,8 +5,14 @@
 </template>
 
 <script>
+const Offers = () => import('../components/Offers')
+
 export default {
 	name: 'Home',
+
+	components: {
+		Offers
+	},
 
 	metaInfo: {
 		title: 'Farmino | Início',
@@ -14,7 +20,7 @@ export default {
 		meta: [
 			{
 				name: 'description',
-				content: 'O Farmino é pra qualquer fome. Peça onde estiver. Os melhores alimentos estão aqui!'
+				content: 'A Farmino é pra qualquer fome. Peça onde estiver. Os melhores alimentos estão aqui!'
 			}
 		]
 	}

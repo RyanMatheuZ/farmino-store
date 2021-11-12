@@ -1,41 +1,54 @@
 <template>
-	<header class="bg-white flex items-center justify-between shadow-lg px-20 py-10">
-		<RouterLink to="/">
-			<img
-				src=""
-				alt="Farmino"
+	<header class="bg-white shadow-lg">
+		<div class="container flex flex-col items-start md:flex-row md:items-center md:justify-between mx-auto px-5 md:px-20 py-8">
+			<!-- Logo -->
+			<RouterLink 
+				to="/"
 				title="Farmino"
-				draggable="false"
 			>
-		</RouterLink>
-
-		<nav>
-			<ul class="flex">
-				<li
-					v-for="(item, index) of navItems"
-					:key="index"
-					class="mx-3"
+				<img
+					src="@/assets/icon/logo/logo.svg"
+					alt="Farmino"
+					draggable="false"
+					class="mb-3 md:mb-0"
 				>
-					<RouterLink
-						:to="item.url"
-						class="font-medium"
-					>
-						{{ item.label }}
-					</RouterLink>
-				</li>
+			</RouterLink>
 
-				<li>
-					<RouterLink to="/product-cart">
-						<img
-							src="@/assets/icon/cart.svg"
-							alt="Carrinho de produtos"
-							title="Carrinho de produtos"
-							draggable="false"
+			<nav>
+				<ul class="flex flex-col items-start space-y-2 md:flex-row md:items-center md:space-x-8 md:space-y-0 w-full">
+					<!-- Menu Items -->
+					<li
+						v-for="(item, index) of navItems"
+						:key="index"
+						class="text-black-100 border-l-4 hover:border-green-light md:border-0 text-base md:text-lg font-medium transition-colors ease-in-out duration-300 py-1 md:py-0"
+					>
+						<RouterLink
+							:to="item.url"
+							class="ml-2 md:ml-0"
 						>
-					</RouterLink>
-				</li>
-			</ul>
-		</nav>
+							{{ item.label }}
+						</RouterLink>
+					</li>
+
+					<!-- Cart -->
+					<li
+						title="Carrinho de produtos" 
+						class="bg-green-light flex items-center justify-center rounded-full cursor-pointer h-11 w-11 md:ml-5 p-1"
+					>
+						<RouterLink to="/product-cart">
+							<img
+								src="@/assets/icon/cart.svg"
+								alt="Carrinho de produtos"
+								draggable="false"
+								width="20"
+							>
+						</RouterLink>
+					</li>
+
+					<!-- Mobile Button -->
+				</ul>
+			</nav>
+		</div>
 	</header>
 </template>
 
@@ -51,12 +64,12 @@ export default {
 					url: '/'
 				},
 				{
-					label: 'Categorias',
-					url: ''
+					label: 'Produtos',
+					url: '/products'
 				},
 				{
 					label: 'Ofertas',
-					url: '/offers'
+					url: '/#offers'
 				},
 				{
 					label: 'Sobre',
@@ -66,7 +79,9 @@ export default {
 					label: 'Contato',
 					url: '/contact'
 				}
-			]
+			],
+
+			activateMenu: false
 		}
 	}
 }
