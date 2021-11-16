@@ -1,22 +1,37 @@
 <template>
 	<header class="bg-white shadow-lg">
-		<div class="container flex flex-col items-start md:flex-row md:items-center md:justify-between mx-auto px-5 md:px-20 py-8">
-			<!-- Logo -->
-			<RouterLink 
-				to="/"
-				title="Farmino"
+		<div class="container flex flex-wrap md:flex-nowrap md:items-center justify-between mx-auto px-5 md:px-20 py-7">
+			<div
+				class="w-1/2 md:w-auto"
 			>
-				<img
-					src="@/assets/icon/logo/logo.svg"
-					alt="Farmino"
-					draggable="false"
-					class="mb-3 md:mb-0"
-				>
-			</RouterLink>
+				<RouterLink to="/">
+					<img
+						src="logo/logo.svg"
+						alt="Farmino"
+						draggable="false"
+						title="Farmino"
+						class="mb-5 md:mb-0 max-w-full"
+						width="170"
+					>
+				</RouterLink>
+			</div>
 
-			<nav>
+			<figure class="flex justify-end items-center md:hidden w-1/2 md:w-auto">
+				<img
+					src="icon/menu-mobile.svg"
+					alt="Menu"
+					title="Menu"
+					width="40"
+					class="rounded-full cursor-pointer"
+					@click="openMenu"
+				>
+			</figure>
+
+			<nav 
+				class="w-full md:w-auto md:inline-block"
+				:class="{ 'hidden' : menuIsClose }"
+			>
 				<ul class="flex flex-col items-start space-y-2 md:flex-row md:items-center md:space-x-8 md:space-y-0 w-full">
-					<!-- Menu Items -->
 					<li
 						v-for="(item, index) of navItems"
 						:key="index"
@@ -29,23 +44,19 @@
 							{{ item.label }}
 						</RouterLink>
 					</li>
-
-					<!-- Cart -->
 					<li
-						title="Carrinho de produtos" 
-						class="bg-green-light flex items-center justify-center rounded-full cursor-pointer h-11 w-11 md:ml-5 p-1"
+						title="Carrinho de produtos"
+						class="bg-green-light flex items-center justify-center rounded-full cursor-pointer transition-all ease-in duration-200 h-11 w-11 md:ml-5 p-1"
 					>
 						<RouterLink to="/product-cart">
 							<img
-								src="@/assets/icon/cart.svg"
+								src="/icon/cart.svg"
 								alt="Carrinho de produtos"
 								draggable="false"
 								width="20"
 							>
 						</RouterLink>
 					</li>
-
-					<!-- Mobile Button -->
 				</ul>
 			</nav>
 		</div>
@@ -81,7 +92,13 @@ export default {
 				}
 			],
 
-			activateMenu: false
+			menuIsClose: true
+		}
+	},
+
+	methods: {
+		openMenu() {
+			this.menuIsClose = !this.menuIsClose
 		}
 	}
 }
