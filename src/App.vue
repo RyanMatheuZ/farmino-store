@@ -3,8 +3,6 @@
 		<Header />
 
     	<RouterView />
-
-		<Footer />
   	</div>
 </template>
 
@@ -38,31 +36,31 @@ export default {
 				name: 'keywords',
 				content: 'farmino, loja, e-commerce, produto, alimento, orgânico, saudável'
 			},
-			{ 
-				name: 'generator', 
-				content: 'Visual Studio Code' 
+			{
+				name: 'generator',
+				content: 'Visual Studio Code'
 			},
-			{ 
-				name: 'format-detection', 
-				content: 'telephone=no' 
+			{
+				name: 'format-detection',
+				content: 'telephone=no'
 			},
-			{ 
-				name: 'author', 
-				content: 'Ryan Oliveira' 
+			{
+				name: 'author',
+				content: 'Ryan Oliveira'
 			},
-			{ 
-				name: 'theme-color', 
-				content: '#0BE881' 
+			{
+				name: 'theme-color',
+				content: '#0BE881'
 			},
 
 			// OpenGraph
-     		{ 
-				property: 'og:type', 
-				content: 'Loja virtual, e-commerce' 
+     		{
+				property: 'og:type',
+				content: 'Loja virtual, e-commerce'
 			},
-      		{ 
-				property: 'og:author', 
-			  	content: 'Ryan Oliveira' 
+      		{
+				property: 'og:author',
+			  	content: 'Ryan Oliveira'
 			}
 		]
 	}

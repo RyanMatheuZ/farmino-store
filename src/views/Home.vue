@@ -1,17 +1,19 @@
 <template>
 	<main>
+		<HomeHero />
 
+		<br><br><br><br><br><br><br><br><br><br>
 	</main>
 </template>
 
 <script>
-const Offers = () => import('../components/Offers')
+const HomeHero = () => import('../components/Home/HomeHero')
 
 export default {
 	name: 'Home',
 
 	components: {
-		Offers
+		HomeHero
 	},
 
 	metaInfo: {

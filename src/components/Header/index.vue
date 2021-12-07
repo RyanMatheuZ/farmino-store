@@ -8,8 +8,8 @@
 					<img
 						src="logo/logo.svg"
 						alt="Farmino"
-						draggable="false"
 						title="Farmino"
+						draggable="false"
 						class="mb-5 md:mb-0 max-w-full"
 						width="170"
 					>
@@ -35,7 +35,7 @@
 					<li
 						v-for="(item, index) of navItems"
 						:key="index"
-						class="text-black-100 border-l-4 hover:border-green-light md:border-0 text-base md:text-lg font-medium transition-colors ease-in-out duration-300 py-1 md:py-0"
+						class="text-black-100 border-l-4 border-green-opaque hover:border-green-light md:border-0 text-base md:text-lg font-medium transition-colors ease-in-out duration-300 py-1 md:py-0"
 					>
 						<RouterLink
 							:to="item.url"

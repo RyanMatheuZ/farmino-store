@@ -1,18 +1,28 @@
 module.exports = {
 	purge: [],
 
-	darkMode: 'class', // or 'media' or 'class'
+	darkMode: false, // or 'media' or 'class'
 
 	theme: {
 		extend: {
+			backgroundImage: {
+				'hero': "url('/img/main-image.jpg')",
+				'footer': "url('/footer-bg.svg')"
+			},
+
 			colors: {
 				black: {
 					100: '#3D3D3D'
 				},
 
 				green: {
+					opaque: '#E7EEC2',
 					dark: '#05C46B',
 					light: '#0BE881'
+				},
+
+				yellow: {
+					medium: '#D68A00'
 				}
 			}
 		}
