@@ -1,6 +1,6 @@
 <template>
-	<section class="flex flex-col items-center space-y-5 md:flex-row md:justify-center md:space-x-5 md:space-y-0 transform translate-y-10">
-		<article class="bg-blue-50 grid grid-cols-2 rounded-lg w-96 p-5">
+	<section class="flex flex-col items-center space-y-5 md:flex-row md:justify-center md:space-x-5 md:space-y-0 transform translate-y-10 mx-5 md:mx-0">
+		<article class="bg-blue-200 grid grid-cols-2 rounded-lg p-5">
 			<div class="flex flex-col justify-center">
 				<span class="uppercase text-green-800 text-xl font-bold">
 					25% OFF
@@ -18,18 +18,18 @@
 				</RouterLink>
 			</div>
 
-			<figure class="flex items-center justify-center">
-				<img 
-					src="/img/watermelon-image.jpg" 
+			<figure class="flex items-center justify-center mx-2">
+				<img
+					src="/img/watermelon-image.png"
 					alt="Frutas com desconto"
 					title="Frutas com desconto"
 					draggable="false"
-					width="150"
+					width="120"
 				>
 			</figure>
 		</article>
 
-		<article class="bg-yellow-100 grid grid-cols-2 rounded-lg w-96 p-5">
+		<article class="bg-yellow-200 grid grid-cols-2 rounded-lg p-5">
 			<div class="flex flex-col justify-center">
 				<span class="uppercase text-green-800 text-xl font-bold">
 					45% OFF
@@ -47,18 +47,18 @@
 				</RouterLink>
 			</div>
 
-			<figure class="flex items-center justify-center">
-				<img 
-					src="/img/potato-image.jpg" 
+			<figure class="flex items-center justify-center mx-2">
+				<img
+					src="/img/onion-image.png"
 					alt="Legumes com desconto"
 					title="Legumes com desconto"
 					draggable="false"
-					width="150"
+					width="120"
 				>
 			</figure>
 		</article>
 
-		<article class="bg-red-100 grid grid-cols-2 rounded-lg w-96 p-5">
+		<article class="bg-red-200 grid grid-cols-2 rounded-lg p-5">
 			<div class="flex flex-col justify-center">
 				<span class="uppercase text-green-800 text-xl font-bold">
 					30% OFF
@@ -76,13 +76,13 @@
 				</RouterLink>
 			</div>
 
-			<figure class="flex items-center justify-center">
-				<img 
-					src="/img/healthy-image.jpg" 
+			<figure class="flex items-center justify-center mx-2">
+				<img
+					src="/img/healthy-image.png"
 					alt="Verduras com desconto"
 					title="Verduras com desconto"
 					draggable="false"
-					width="150"
+					width="120"
 				>
 			</figure>
 		</article>
