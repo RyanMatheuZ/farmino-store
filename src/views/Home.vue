@@ -2,18 +2,20 @@
 	<main>
 		<HomeHero />
 
-		<br><br><br><br><br><br><br><br><br><br>
+		<HomeProductsAdvantages />
 	</main>
 </template>
 
 <script>
 const HomeHero = () => import('../components/Home/HomeHero')
+const HomeProductsAdvantages = () => import('../components/Home/HomeProductsAdvantages')
 
 export default {
 	name: 'Home',
 
 	components: {
-		HomeHero
+		HomeHero,
+		HomeProductsAdvantages
 	},
 
 	metaInfo: {
