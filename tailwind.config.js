@@ -7,7 +7,6 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				'hero': "url('/img/main-image.jpg')",
-				'footer': "url('/footer-bg.svg')"
 			},
 
 			colors: {
