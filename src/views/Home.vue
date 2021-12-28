@@ -3,19 +3,23 @@
 		<HomeHero />
 
 		<HomeProductsAdvantages />
+
+		<HomePopularProducts />
 	</main>
 </template>
 
 <script>
 const HomeHero = () => import('../components/Home/HomeHero')
 const HomeProductsAdvantages = () => import('../components/Home/HomeProductsAdvantages')
+const HomePopularProducts = () => import('../components/Home/HomePopularProducts')
 
 export default {
 	name: 'Home',
 
 	components: {
 		HomeHero,
-		HomeProductsAdvantages
+		HomeProductsAdvantages,
+		HomePopularProducts
 	},
 
 	metaInfo: {

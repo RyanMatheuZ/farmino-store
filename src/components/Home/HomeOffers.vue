@@ -1,5 +1,8 @@
 <template>
-	<section class="flex flex-col items-center space-y-5 md:flex-row md:justify-center md:space-x-5 md:space-y-0 transform translate-y-10 mx-5 md:mx-0">
+	<section
+		id="offers"
+		class="flex flex-col items-center space-y-5 md:flex-row md:justify-center md:space-x-5 md:space-y-0 transform translate-y-10 mx-5 md:mx-0"
+	>
 		<article class="bg-blue-200 grid grid-cols-2 rounded-lg shadow-lg p-5">
 			<div class="flex flex-col justify-center">
 				<span class="uppercase text-green-800 text-xl font-bold">
