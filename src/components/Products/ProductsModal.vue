@@ -12,7 +12,7 @@
 			<button
 				@click="closeCard()"
 				title="Voltar"
-				class="outline-none ml-2 mt-3"
+				class="bg-white rounded-md outline-none ml-2 mt-2 p-1"
 			>
 				<img
 					src="/icon/back-button.svg"
@@ -74,13 +74,46 @@
 					{{ productInformations.description }}
 				</p>
 
-				<div class="mt-3">
+				<div class="flex items-center justify-between mt-3">
+					<div class="flex items-center bg-gray-100 rounded-lg">
+						<button
+							title="Retirar"
+							class="outline-none hover:bg-gray-200 transition-colors duration-300 ease-in-out rounded-tl-lg rounded-bl-lg p-2"
+						>
+							<img
+								src="/icon/minus.svg"
+								alt="Retirar"
+								title="Retirar"
+								draggable="false"
+								width="25"
+							>
+						</button>
+
+						<span class="text-center font-semibold select-none px-3 py-2">
+							0
+						</span>
+
+						<button
+							title="Adicionar"
+							class="outline-none hover:bg-gray-200 transition-colors duration-300 ease-in-out rounded-tr-lg rounded-br-lg p-2"
+						>
+							<img
+								src="/icon/plus.svg"
+								alt="Adicionar"
+								title="Adicionar"
+								draggable="false"
+								width="25"
+							>
+						</button>
+					</div>
+
 					<button
 						title="Adicionar ao carrinho"
-						class="outline-none flex items-center justify-between bg-green-dark text-white font-semibold rounded-lg p-2"
+						class="outline-none flex items-center justify-between bg-green-dark hover:bg-green-light
+						transition-colors duration-300 ease-in-out text-white font-semibold rounded-lg p-2"
 					>
 						<img
-							src="/icon/plus.svg"
+							src="/icon/add-to-cart.svg"
 							alt="Adicionar ao carrinho"
 							title="Adicionar ao carrinho"
 							draggable="false"
