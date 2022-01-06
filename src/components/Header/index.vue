@@ -1,9 +1,7 @@
 <template>
 	<header class="bg-white shadow-lg">
 		<div class="container flex flex-wrap md:flex-nowrap md:items-center justify-between mx-auto px-5 md:px-20 py-7">
-			<div
-				class="w-1/2 md:w-auto"
-			>
+			<div class="w-1/2 md:w-auto">
 				<RouterLink to="/">
 					<img
 						src="logo/logo.svg"
@@ -18,21 +16,22 @@
 
 			<figure class="flex justify-end items-center md:hidden w-1/2 md:w-auto">
 				<img
+					@click="activateMenu()"
 					src="icon/menu-mobile.svg"
 					alt="Menu"
 					title="Menu"
 					width="40"
 					class="rounded-full cursor-pointer"
-					@click="openMenu"
 				>
 			</figure>
 
-			<nav 
+			<nav
 				class="w-full md:w-auto md:inline-block"
 				:class="{ 'hidden' : menuIsClose }"
 			>
 				<ul class="flex flex-col items-start space-y-2 md:flex-row md:items-center md:space-x-8 md:space-y-0 w-full">
 					<li
+						@click="activateMenu()"
 						v-for="(item, index) of navItems"
 						:key="index"
 						class="text-black-100 border-l-4 border-green-opaque hover:border-green-light md:border-0 text-base md:text-lg font-medium transition-colors ease-in-out duration-300 py-1 md:py-0"
@@ -44,7 +43,9 @@
 							{{ item.label }}
 						</RouterLink>
 					</li>
+
 					<li
+						@click="activateMenu()"
 						title="Carrinho de produtos"
 						class="bg-green-light flex items-center justify-center rounded-full cursor-pointer transition-all ease-in duration-200 h-11 w-11 md:ml-5 p-1"
 					>
@@ -97,7 +98,7 @@ export default {
 	},
 
 	methods: {
-		openMenu() {
+		activateMenu() {
 			this.menuIsClose = !this.menuIsClose
 		}
 	}
