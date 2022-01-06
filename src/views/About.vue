@@ -1,12 +1,18 @@
 <template>
 	<main>
-
+		<AboutHero />
 	</main>
 </template>
 
 <script>
+const AboutHero = () => import('../components/About/AboutHero')
+
 export default {
 	name: 'About',
+
+	components: {
+		AboutHero
+	},
 
 	metaInfo: {
 		title: 'Farmino | Sobre',
