@@ -5,7 +5,7 @@
 		</li>
 
 		<li
-			v-for="(item, index) in partners"
+			v-for="(item, index) of partners"
 			:key="index"
 			class="mb-1"
 		>

@@ -5,7 +5,7 @@
 		</li>
 
 		<li
-			v-for="(item, index) in contacts"
+			v-for="(item, index) of contacts"
 			:key="index"
 			class="flex cursor-default mb-1"
 		>

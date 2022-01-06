@@ -5,7 +5,8 @@
 		</li>
 
 		<li
-			v-for="(item, index) in siteMap"
+			@click="scrollTop(item)"
+			v-for="(item, index) of siteMap"
 			:key="index"
 			class="mb-1"
 		>
@@ -52,6 +53,14 @@ export default {
 					link: '/product-cart'
 				}
 			]
+		}
+	},
+
+	methods: {
+		scrollTop(item) {
+			if (item.label === 'Ofertas') return
+
+			scrollTo(0, 0)
 		}
 	}
 }
