@@ -1,17 +1,21 @@
 <template>
 	<main>
 		<AboutHero />
+
+		<AboutTestimonials />
 	</main>
 </template>
 
 <script>
 const AboutHero = () => import('../components/About/AboutHero')
+const AboutTestimonials = () => import('../components/About/AboutTestimonials')
 
 export default {
 	name: 'About',
 
 	components: {
-		AboutHero
+		AboutHero,
+		AboutTestimonials
 	},
 
 	metaInfo: {
