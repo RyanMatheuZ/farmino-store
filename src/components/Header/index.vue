@@ -80,10 +80,6 @@ export default {
 					url: '/products'
 				},
 				{
-					label: 'Ofertas',
-					url: '/#offers'
-				},
-				{
 					label: 'Sobre',
 					url: '/about'
 				},
