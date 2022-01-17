@@ -11,8 +11,7 @@
 				</label>
 
 				<input
-					@change="$v.name.$touch()"
-					v-model="name"
+					v-model="$v.name.$model"
 					type="text"
 					id="name"
 					placeholder="Digite aqui seu nome"
@@ -30,7 +29,7 @@
 					v-if="!$v.name.minLength"
 					class="text-red-400 font-semibold mt-0.5 mb-1 ml-3"
 				>
-					- O mínimo de letras são {{ $v.name.$params.minLength.min }}!
+					- O mínimo de letras é {{ $v.name.$params.minLength.min }}!
 				</span>
 			</div>
 
@@ -44,8 +43,7 @@
 				</label>
 
 				<input
-					@change="$v.email.$touch()"
-					v-model="email"
+					v-model="$v.email.$model"
 					type="email"
 					id="email"
 					placeholder="Digite aqui seu e-mail"
@@ -70,8 +68,7 @@
 				</label>
 
 				<textarea
-					@change="$v.message.$touch()"
-					v-model="message"
+					v-model="$v.message.$model"
 					id="message"
 					placeholder="Digite aqui sua mensagem"
 					class="outline-none resize-y ring-green-dark focus:ring-2 rounded-md mt-3 p-3"
@@ -88,7 +85,7 @@
 					v-if="!$v.message.minLength"
 					class="text-red-400 font-semibold mt-0.5 mb-1 ml-3"
 				>
-					- O mínimo de letras são {{ $v.message.$params.minLength.min }}!
+					- O mínimo de letras é {{ $v.message.$params.minLength.min }}!
 				</span>
 			</div>
 
@@ -100,6 +97,14 @@
 					class="flex-1 md:flex-none bg-green-dark hover:bg-green-light text-white font-semibold outline-none transition-colors duration-200 ease-in-out md:w-32 rounded-sm mt-4 px-5 py-3"
 				>
 					Enviar
+				</button>
+
+				<button
+					@click.prevent="onClear()"
+					type="submit"
+					class="flex-1 md:flex-none bg-red-600 hover:bg-red-500 text-white font-semibold outline-none transition-colors duration-200 ease-in-out md:w-32 rounded-sm mt-4 px-5 py-3"
+				>
+					Limpar
 				</button>
 			</div>
 		</form>
@@ -149,7 +154,17 @@ export default {
 
 	methods: {
 		onSubmit() {
-			!this.$v.$invalid ? alert('Ok!') : this.$v.$touch()
+			this.$v.$touch()
+
+			if (!this.$v.$invalid) this.onClear()
+		},
+
+		onClear() {
+			this.name = ''
+			this.email = ''
+			this.message = ''
+
+			this.$v.$reset()
 		}
 	}
 }
