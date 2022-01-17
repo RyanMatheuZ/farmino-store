@@ -109,6 +109,7 @@
 			</div>
 		</form>
 
+		<!-- BOX -->
 		<section class="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-5xl mx-auto pt-2">
 			<BoxAddress />
 
@@ -156,7 +157,19 @@ export default {
 		onSubmit() {
 			this.$v.$touch()
 
-			if (!this.$v.$invalid) this.onClear()
+			if (!this.$v.$invalid) {
+				this.onClear()
+
+				this.$swal({
+					toast: true,
+					position: 'top-end',
+					showConfirmButton: false,
+					timer: 4000,
+					icon: 'success',
+					title: 'Sucesso',
+					text: 'Sua mensagem foi enviada!',
+				})
+			}
 		},
 
 		onClear() {

@@ -4,10 +4,13 @@ import router from './router'
 import store from './store'
 import VueMeta from 'vue-meta'
 import Vuelidate from 'vuelidate'
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 import './assets/css/style.css'
 
 Vue.use(VueMeta)
 Vue.use(Vuelidate)
+Vue.use(VueSweetalert2)
 
 Vue.config.productionTip = false
 
