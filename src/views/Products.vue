@@ -1,12 +1,26 @@
 <template>
 	<main>
+		<ProductsHero />
 
+		<ProductsNavBar />
+
+		<Fruits />
 	</main>
 </template>
 
 <script>
+const ProductsHero = () => import('../components/Products/ProductsHero')
+const ProductsNavBar = () => import('../components/Products/ProductsNavBar')
+const Fruits = () => import('./Fruits')
+
 export default {
 	name: 'Product',
+
+	components: {
+		ProductsHero,
+		ProductsNavBar,
+		Fruits
+	},
 
 	metaInfo: {
 		title: 'Farmino | Produtos',

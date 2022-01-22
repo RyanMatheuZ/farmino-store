@@ -13,7 +13,15 @@ const routes = [
 	{
 		path: '/products',
 		name: 'Products',
-		component: () => import('../views/Products.vue')
+		component: () => import('../views/Products.vue'),
+
+		// children: [
+		// 	{
+		// 		path: '',
+		// 		name: '',
+		// 		component: ''
+		// 	}
+		// ]
 	},
 	{
 		path: '/about',
