@@ -5,6 +5,8 @@
 		<ProductsNavBar />
 
 		<Fruits />
+
+		<Greens />
 	</main>
 </template>
 
@@ -12,6 +14,7 @@
 const ProductsHero = () => import('../components/Products/ProductsHero')
 const ProductsNavBar = () => import('../components/Products/ProductsNavBar')
 const Fruits = () => import('./Fruits')
+const Greens = () => import('./Greens')
 
 export default {
 	name: 'Product',
@@ -19,7 +22,8 @@ export default {
 	components: {
 		ProductsHero,
 		ProductsNavBar,
-		Fruits
+		Fruits,
+		Greens
 	},
 
 	metaInfo: {
