@@ -4,30 +4,20 @@
 
 		<ProductsNavBar />
 
-		<Fruits />
-
-		<Vegetables />
-
-		<Greens />
+		<RouterView />
 	</main>
 </template>
 
 <script>
 const ProductsHero = () => import('../components/Products/ProductsHero')
 const ProductsNavBar = () => import('../components/Products/ProductsNavBar')
-const Fruits = () => import('./Fruits')
-const Vegetables = () => import('./Vegetables')
-const Greens = () => import('./Greens')
 
 export default {
 	name: 'Product',
 
 	components: {
 		ProductsHero,
-		ProductsNavBar,
-		Fruits,
-		Vegetables,
-		Greens
+		ProductsNavBar
 	},
 
 	metaInfo: {

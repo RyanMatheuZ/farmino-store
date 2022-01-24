@@ -84,7 +84,7 @@ export default {
 				},
 				{
 					id: 8732,
-					name: 'Oregano',
+					name: 'Orégano',
 					family: 'Lamiaceae',
 					price: '6,90',
 					img: 'oregano-image.png',
@@ -111,7 +111,7 @@ export default {
 				},
 				{
 					id: 4652,
-					name: 'Majericão',
+					name: 'Manjericão',
 					family: 'Lamiaceae',
 					price: '2,80',
 					img: 'basil-image.png',
