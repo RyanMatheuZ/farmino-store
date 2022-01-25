@@ -14,7 +14,7 @@
 				</h2>
 
 				<RouterLink
-					to=""
+					:to="{ name: 'Fruits', params: { name: 'fruits' } }"
 					class="bg-gray-700 hover:bg-gray-600 text-white font-semibold w-max rounded-sm transition-all ease-in-out duration-300 mt-5 px-5 py-2"
 				>
 					Conferir
@@ -43,7 +43,7 @@
 				</h2>
 
 				<RouterLink
-					to=""
+					:to="{ name: 'Vegetables', params: { name: 'vegetables' } }"
 					class="bg-yellow-700 hover:bg-yellow-600 text-white font-semibold w-max rounded-sm transition-all ease-in-out duration-300 mt-5 px-5 py-2"
 				>
 					Conferir
@@ -72,7 +72,7 @@
 				</h2>
 
 				<RouterLink
-					to=""
+					:to="{ name: 'Greens', params: { name: 'greens' } }"
 					class="bg-red-700 hover:bg-red-600 text-white font-semibold w-max rounded-sm transition-all ease-in-out duration-300 mt-5 px-5 py-2"
 				>
 					Conferir
