@@ -18,6 +18,17 @@ export default {
 	components: {
 		ErrorMessage,
 		ErrorImage
+	},
+
+	metaInfo: {
+		title: 'Farmino | Error 404',
+
+		meta: [
+			{
+				name: 'description',
+				content: 'Oops! Página não encontrada...'
+			}
+		]
 	}
 }
 </script>

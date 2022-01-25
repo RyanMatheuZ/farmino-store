@@ -24,7 +24,7 @@ export default {
 		meta: [
 			{
 				name: 'description',
-				content: ''
+				content: 'Dúvidas? Por favor, entre em contato conosco!'
 			}
 		]
 	}
