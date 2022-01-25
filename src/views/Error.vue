@@ -1,7 +1,7 @@
 <template>
 	<main>
 		<div class="container flex flex-wrap items-center justify-evenly mx-auto">
-			<article class="space-y-5 mx-3 my-6">
+			<article class="flex flex-col justify-center space-y-5 border-black-100 border-l-4 mx-5 my-10 pl-3">
 				<h1 class="text-green-light text-6xl font-bold">
 					Oops!
 				</h1>
@@ -10,7 +10,7 @@
 					Página não encontrada...
 				</p>
 
-				<div>
+				<div class="flex items-center">
 					<RouterLink
 						to="/"
 						class="bg-green-light text-white font-semibold rounded-full px-4 py-2"
@@ -20,11 +20,11 @@
 				</div>
 			</article>
 
-			<figure class="max-w-2xl mx-3 my-6">
+			<figure class="max-w-2xl mx-5 my-10">
 				<img 
 					src="/icon/error.svg" 
 					alt="Oops! Página não encontrada..."
-					title="Página não encontrada!"
+					title="Oops! Página não encontrada..."
 					draggable="false"
 					class="w-max"
 				>
