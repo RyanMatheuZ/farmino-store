@@ -74,40 +74,14 @@
 					{{ productInformations.description }}
 				</p>
 
-				<div class="flex items-center justify-between mt-3">
-					<div class="flex items-center bg-gray-100 rounded-lg">
-						<button
-							title="Retirar"
-							class="outline-none hover:bg-gray-200 transition-colors duration-300 ease-in-out rounded-tl-lg rounded-bl-lg p-2"
-						>
-							<img
-								src="/icon/minus.svg"
-								alt="Retirar"
-								title="Retirar"
-								draggable="false"
-								width="25"
-							>
-						</button>
-
-						<span class="text-center font-semibold select-none px-3 py-2">
-							0
-						</span>
-
-						<button
-							title="Adicionar"
-							class="outline-none hover:bg-gray-200 transition-colors duration-300 ease-in-out rounded-tr-lg rounded-br-lg p-2"
-						>
-							<img
-								src="/icon/plus.svg"
-								alt="Adicionar"
-								title="Adicionar"
-								draggable="false"
-								width="25"
-							>
-						</button>
-					</div>
-
+				<div class="mt-3">
 					<button
+						@click="addToCart(
+							name = productInformations.name,
+							family = productInformations.family,
+							price = productInformations.price,
+							img = productInformations.img
+						)"
 						title="Adicionar ao carrinho"
 						class="outline-none flex items-center justify-between bg-green-dark hover:bg-green-light
 						transition-colors duration-300 ease-in-out text-white font-semibold rounded-lg p-2"
@@ -130,6 +104,8 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
+
 export default {
 	name: 'ProductsModal',
 
@@ -145,9 +121,62 @@ export default {
 		}
 	},
 
+	data() {
+		return {
+			sendProduct: {
+				name: '',
+				family: '',
+				price: '',
+				img: ''
+			},
+
+			productExistsInTheCart: null
+		}
+	},
+
+	computed: {
+		...mapState({
+			productsInCart: state => state.productsInCart
+		})
+	},
+
 	methods: {
+		...mapMutations(['ADD_TO_CART']),
+
 		closeCard() {
 			this.$emit('closeCard', true)
+		},
+
+		addToCart(name, family, price, img) {
+			this.productExistsInTheCart = this.productsInCart.find(product => product.name === name)
+
+			if (this.productExistsInTheCart) {
+				this.$swal({
+					toast: true,
+					position: 'top-end',
+					showConfirmButton: false,
+					timer: 4000,
+					icon: 'error',
+					title: name,
+					text: 'Já existe no carrinho!'
+				})
+
+				return
+			}
+
+			this.sendProduct = { name, family, price, img }
+
+			this.ADD_TO_CART(this.sendProduct)
+
+			this.$swal({
+				toast: true,
+				position: 'top-end',
+				showConfirmButton: false,
+				timer: 4000,
+				icon: 'success',
+				title: name,
+				text: 'Adicionado ao carrinho!'
+			})
 		}
 	}
 }
